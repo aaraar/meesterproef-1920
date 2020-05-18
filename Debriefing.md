@@ -1,4 +1,10 @@
-# Debriefing
+## Case
+What we ask of you is that you take in this data, work with us to understand the use case
+and help us with ideas on how to visualise the vocabulary in a way that makes it easy to
+navigate but keeping in mind that the main purpose of the tool is to create and edit the
+vocabulary, not just visualise.
+
+## Debriefing
 Wallscope creates knowledge graphs from the unique data vocabulary of their clients.
 Strvct is a structured data application that helps their clients delivering the right vocabulary to the dataset and visualizing their linked
 data. This way, their clients get a better sense of how their data gets structured and improves their understanding of the service and how they should use it.
@@ -7,7 +13,7 @@ so to us the task to help them come up with and prototype ideas for the visualiz
 
 ## What does it mean
 Starting with this project, I had very little knowledge of LinkedData, knowledge graphs or other of these graph data standards.
-To help me understand the assignment a little bit better, I have listed a few terms and standards below that I needed to wrap my head around
+To help me understand the assignment a little better, I have listed a few terms and standards below I needed to wrap my head around
 first, before I really understood what was supposed to happen.
 Most of these terms are mentioned in Medium articles written by employees of Wallscope and are explained lot better and more comprehensive than I did, 
 but beneath are my very brief explanations of how I have grasped them.
@@ -29,7 +35,7 @@ LinkedData according to W3C:
 >
 > ~ [W3C](https://www.w3.org/wiki/LinkedData)
 
-LinkedData is a term that has been around for quite some time, however these standards are not as widely adopted as Tim Bernsers-Lee had hoped.
+LinkedData is a term that has been around for quite some time, however these standards are not as widely adopted as Tim Berners-Lee had hoped.
 It is however becoming more and more popular to use similar standards such as RDF with datasets to work with data.
 
 ### RDF

@@ -1,14 +1,20 @@
 # Strvct
 ### By Wallscope
 
-# Debriefing
+## Case in the words of Wallscope
+What we ask of you is that you take in this data, work with us to understand the use case
+and help us with ideas on how to visualise the vocabulary in a way that makes it easy to
+navigate but keeping in mind that the main purpose of the tool is to create and edit the
+vocabulary, not just visualise.
+
+## Debriefing
 Wallscope creates knowledge graphs from the unique data vocabulary of their clients.
 Strvct is a structured data application that helps their clients delivering the right vocabulary to the dataset and visualizing their linked
 data. This way, their clients get a better sense of how their data gets structured and improves their understanding of the service and how they should use it.
 The way larger datasets get visualized is a tough and challenging concept that wallscope hasn't figured out yet,
 so to us the task to help them come up with and prototype ideas for the visualization of LinkedData.
 
-## What does it mean
+### What does it mean
 Starting with this project, I had very little knowledge of LinkedData, knowledge graphs or other of these graph data standards.
 To help me understand the assignment a little bit better, I have listed a few terms and standards below that I needed to wrap my head around
 first, before I really understood what was supposed to happen.
@@ -73,11 +79,11 @@ Strvct is an application that uses RDF and OWL to represent the vocabulary of a 
 The application allows clients to fill in their own data and link their data in a clear and easy to understand visualization.
 However, at this point the largest part of Strvct consists of a backend in which wallscope creates the links themselves after a client has send their data in their own format.
 
-## Our goal
+### Our goal
 Our goal in this is to prototype or atleast conceptualize frontend visualizations for a client so that they can understand what relations exist between which datapoints.
 If possible, the way clients enter their data into Strvct and link their data should be taken into account while creating these prototypes.
 
-## Planning
+### Planning
 Every week consists of these 4 main tasks
 1. Monday - Standup & checkup with our coach and with Wallscope.
 1. Wednesday - Codereview from AUAS lecturers Joost & Laurens.
