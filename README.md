@@ -1,160 +1,99 @@
-# Meesterproef @cmda-minor-web 1920
+# Strvct
+### By Wallscope
 
-In de Meesterproef ga je toepassen wat je in de Minor Web Development hebt geleerd.
-Voor de Meesterproef krijg je een opdracht van een echte opdrachtgever.
-Je gaat leren hoe je de geleerde kennis en skills kan gebruiken om een oplossing voor een probleem te ontwerpen. Testen, maken, evalueren, testen, maken ...
+# Debriefing
+Wallscope creates knowledge graphs from the unique data vocabulary of their clients.
+Strvct is a structured data application that helps their clients delivering the right vocabulary to the dataset and visualizing their linked
+data. This way, their clients get a better sense of how their data gets structured and improves their understanding of the service and how they should use it.
+The way larger datasets get visualized is a tough and challenging concept that wallscope hasn't figured out yet,
+so to us the task to help them come up with and prototype ideas for the visualization of LinkedData.
 
-<!-- Je kan kiezen uit verschillende projecten. Hier ga je 5 weken aan werken.  Voor de Meesterproef geef je met een eerste, tweede keuze en derde keuze aan welk project je graag wil doen. Daarna wordt door de coaches een indeling gemaakt. -->
+## What does it mean
+Starting with this project, I had very little knowledge of LinkedData, knowledge graphs or other of these graph data standards.
+To help me understand the assignment a little bit better, I have listed a few terms and standards below that I needed to wrap my head around
+first, before I really understood what was supposed to happen.
+Most of these terms are mentioned in Medium articles written by employees of Wallscope and are explained lot better and more comprehensive than I did, 
+but beneath are my very brief explanations of how I have grasped them.
 
+### LinkedData / knowledge graphs
+LinkedData according to W3C:
+> The term LinkedData refers to a set of best practices for publishing structured data on the Web. These principles have been coined by Tim Berners-Lee in the design issue note [LinkedData](http://www.w3.org/DesignIssues/LinkedData). The principles are:
+> 
+> 1. Use URIs as names for things
+> 1. Use HTTP URIs so that people can look up those names.
+> 1. When someone looks up a URI, provide useful information.
+> 1. Include links to other URIs. so that they can discover more things.
+>
+> The idea behind these principles is on the one hand side, to use standards for the representation and the access to data on the Web.    
+> On the other hand, the principles propagate to set hyperlinks between data from different sources.     
+> 
+> These hyperlinks connect all LinkedData into a single global data graph, similar as the hyperlinks on the classic Web connect all HTML documents into a single global information space. 
+> Thus, LinkedData is to spreadsheets and databases what the Web of hypertext documents is to word processor files.
+>
+> ~ [W3C](https://www.w3.org/wiki/LinkedData)
+
+LinkedData is a term that has been around for quite some time, however these standards are not as widely adopted as Tim Bernsers-Lee had hoped.
+It is however becoming more and more popular to use similar standards such as RDF with datasets to work with data.
+
+### RDF
+Resource Description Framework, is also a representing data, however it doesn't always requires data to be structured properly.
+In the RDF standard, data always consists of what is called a 'triple'.
+This means that two datapoints are connected by their relation to each other, so `monkey IS animal` but also `animal CONTAINS monkey`.
+The fact that these relations CAN go two ways or even have another relation the other way around is a critical part of why triples are so powerful to represent the data.
+
+RDF accordingf to W3C:
+> RDF is a standard model for data interchange on the Web. RDF has features that facilitate data merging even if the underlying schemas differ, and it specifically supports the evolution of schemas over time without requiring all the data consumers to be changed.    
+>
+> RDF extends the linking structure of the Web to use URIs to name the relationship between things as well as the two ends of the link (this is usually referred to as a “triple”). Using this simple model, it allows structured and semi-structured data to be mixed, exposed, and shared across different applications.    
+>
+> This linking structure forms a directed, labeled graph, where the edges represent the named link between two resources, represented by the graph nodes. This graph view is the easiest possible mental model for RDF and is often used in easy-to-understand visual explanations.    
+>
+> ~ [W3C](https://www.w3.org/RDF/)
+
+### OWL
+OWL stands for Web Ontology Language, and yes those characters don't line up in the acronym.
+I wanted to know whether there was maybe a different acronym it conflicted with or that there was a really profound reason behind the naming, so I started looking.
+The first hit was from winnie-the-pooh where an owl supposedly writes his name as 'wol' and I thought I found it, but then I found the OWL faq from W3C
+
+> Actually, OWL is not a real acronym. The language started out as the "Web Ontology Language", but the Working Group disliked the acronym "WOL". We decided to call it OWL. The Working Group became more comfortable with this decision when one of the members pointed out the justification for this decision from the noted ontologist A.A. Milne who, in his influential book "Winnie the Pooh" stated of the wise character OWL: (...)
+>
+> ~ [W3C](https://www.w3.org/2003/08/owlfaq) 
+
+So a standard for a language that describes ontology for which the name has been chosen on the basis of how much cooler it IS than the original acronym... yeah this is already getting meta.
+Actually, OWL is quite a simple concept.
+
+OWL is a way of describing the relations between data.
+A perfect example by Antero Duarte of Wallscope in his [Medium article about linkedData](https://medium.com/wallscope/linked-data-a-conceptual-exploration-9860a1f44d68):
+> OWL allows us to express that when two people share a parent, they are siblings. So even if our data doesn’t explicitly say that, inference lets us know that the following triples exist implicitly:
+> `dbo:Annete dbo:hasSibling dbo:Jackie`
+> `dbo:Jackie dbo:hasSibling dbo:Annete`
+
+### What does Strvct do in all of this
+Strvct is an application that uses RDF and OWL to represent the vocabulary of a client so they can add NLP features to their products such as semantic search functionality.
+The application allows clients to fill in their own data and link their data in a clear and easy to understand visualization.
+However, at this point the largest part of Strvct consists of a backend in which wallscope creates the links themselves after a client has send their data in their own format.
+
+## Our goal
+Our goal in this is to prototype or atleast conceptualize frontend visualizations for a client so that they can understand what relations exist between which datapoints.
+If possible, the way clients enter their data into Strvct and link their data should be taken into account while creating these prototypes.
 
 ## Planning
+Every week consists of these 4 main tasks
+1. Monday - Standup & checkup with our coach and with Wallscope.
+1. Wednesday - Codereview from AUAS lecturers Joost & Laurens.
+1. Thursday - Designreview from AUAS lecturers Vasilis & Koop.
+1. Friday - Prototype testing with Wallscope
 
-| Planning | Maandag | Dinsdag | Woensdag | Donderdag | Vrijdag |
-|---|---|---|---|---|---|
-| <a href=#meesterproef---week-0>Week 0</a> | Projecten kiezen |   |   |   |   |
-| <a href=#meesterproef---week-1>Week 1</a> | Briefing opdrachtgever | Debriefing |   | <del>Hemelvaart</del> | <del>Hemelvaart</del> |
-| <a href=#meesterproef---week-2>Week 2</a> | Sprint 1 + standup & checkup |   | Codereviews | Designreviews | Sprint 2 |
-| <a href=#meesterproef---week-3>Week 3</a> | <del>Pinksteren</del> |   | Codereviews | Designreviews | Sprint 3 |
-| <a href=#meesterproef---week-4>Week 4</a> | Standup & checkup |   | Codereviews | Designreviews | Sprint 4 |
-| <a href=#meesterproef---week-5>Week 5</a> | Standup & checkup |   |  | Final prototype  | EXPO |
+The project itself will take up 5 weeks consisting of the following milestones:
+1. Debriefing & 1st iteration | Debriefing of the assignment and creating the first prototype/concept
+1. 1st & 2nd iteration | Testing the first prototype/concept a total of 2 times (beginning and end of the week)
+1. 3rd iteration | Testing the second iteration and working on the third iteration for the rest of the week
+1. 4th iteration | This is the last week of testing and after the 4th test, work on the final prototype will start
+1. Final prototype | At the end of the week, a final prototype will be presented to Wallscope and all lecturers and students from the webdev program 
 
-
-
-## Werkwijze
-
-In de eerste week krijg je een briefing van de opdrachtgever en schrijf je een debriefing.
-Dat is de opdracht en de doelstellingen in eigen woorden beschreven.
-Daarna ga je iedere week een proof-of-concept bespreken met je opdrachtgever.
-In week 5 presenteer je het eindresultaat.
-Hiervoor maak je een passende presentatie.
-
-Elke week zijn er coachingsmomenten gepland.
-Coaches voor de Meesterproef zijn: Joost Faber, Laurens Aarnoudse, Vasilis van Gemert en Koop Reynders.
-
-1. Maandag - Standup & checkup met je coach.
-2. Woensdag - Codereview met Joost en Laurens.
-3. Donderdag - Designreview met Vasilis en Koop.
-4. Vrijdag - Testen met de opdrachtgever.
-
-
-## Programma
-
-### Meesterproef - Week 0 (11 mei)
-Deze week worden de projecten gepresenteerd en kun je een project kiezen.
-
-
-- [Presentatie slides](https://docs.google.com/presentation/d/1cMSx0X2GEiu5WfBdRT2i9Jly3MxVHs0V-USg9hH4p2M/edit?usp=sharing)  
-- [Planning](https://docs.google.com/spreadsheets/d/1Oy8f5TSDYUA_qSwfTtYQTGjkNMUM0wAZDqDPHqgRpi4/edit?usp=sharing)
-
-
-
-### Meesterproef - Week 1 (18 - 22 mei)
-Deze week heb je je eerste afspraak met je opdrachtgever.
-Schrijf een [debriefing](Debriefing.md) van de opdracht en check deze met de opdrachtgever en je coach.
-
-1. Maandag is de eerste afspraak met de opdrachtgever en heb je een standup en checkup met je coach.
-2. Dinsdag stuur je een debriefing.
-3. Donderdag en vrijdag is het Hemelvaart. Geen les.
-
-
-
-
-### Meesterproef - Week 2 (25 - 29 mei )
-Deze week ga je twee keer testen bij de opdrachtgever.
-Maandag en vrijdag ga je de opdrachtgever laten zien wat je hebt gemaakt.
-
-1. Maandag heb je een standup en checkup met je coach.
-2. Woensdag is de eerste codereviews.
-3. Donderdag is er een designreview.
-
-
-
-
-### Meesterproef - Week 3 (1 - 5 juni)
-De derde week ga je weer testen bij de opdrachtgever. Aan het eind van de week laat je de 3e sprint zien.
-
-
-1. Maandag is het tweede pinksterdag. Geen les.
-2. Woensdag is er een codereview.
-3. Donderdag is er een designreview.
-
-
-
-### Meesterproef - Week 4 (8 - 12 juni)
-Deze week ga je weer testen bij de opdrachtgever. Aan het eind van de week laat je de 4e sprint zien.
-
-1. Maandag heb je een standup en checkup met je coach.
-2. Woensdag is er een codereview.
-3. Donderdag is er een designreview.
-
-
-
-### Meesterproef - Week 5 (15 - 19 juni)
-Dit is de laatste week van de Meesterproef. Donderdag laat je de je het final prototype zien aan je opdrachtgever. Vrijdag is de EXPO, dan kun je je werk laten zien aan collega's en wordt je werk beoordeeld.
-
-1. Maandag heb je een standup en checkup met je coach.
-2. Donderdag final prototype bij de opdrachtgever.
-3. Vrijdag EXPO. Presentatie en beoordeling van de projecten.
-
-
-
-
-
-## Criteria en beoordeling
-
-Met de Meesterproef laat je zien wat je hebt geleerd tijdens de minor.
-Studenten die de vakken hebben gehaald kunnen aan de Meesterproef beginnen.
-
-De Meesterproef bestaat uit 3 projectweken en een eindproject van 5 weken.
-De 3 projectweken,
-[PW1](https://github.com/cmda-minor-web/project-1-1920),
-[PW2](https://github.com/cmda-minor-web/project-2-1920) en
-[PW3](https://github.com/cmda-minor-web/project-3-1920) tellen mee als AVV.
-
-Het eindproject wordt beoordeeld op een Design rationale, een Product biografie en een reflectie op het eigen niveau.
-Én of de klant blij is met het gemaakte project.
-
-### Design rationale
-In de Design rationale schrijf je de debriefing, de probleem-definitie, toon je de oplossing en schrijf je een uitleg van de code.
-De Design rationale is een verantwoording van je ontwerp.
-
-### Product biografie
-In het eindproject doorloop je een iteratief proces.
-Elke week bespreek je met je opdrachtgever je vorderingen en ideeen.
-In de Product biografie hou je stap voor stap bij wat je allemaal hebt gedaan.
-Je schrijft over het proces, de werkwijze en de planning.
-Ook schetsen, testen, uitprobeersels en inspiratie zijn deel van de Product biografie.
-
-### Reflectie op eigen niveau
-Aan de hand van de vakrubrics reflecteer je systematisch op je werk.
-In een aantal gesprekken met _reviewen_ we het design en de code van je project.
-Dit doen we op basis van de rubrics van de verschillende vakken.
-Zo krijg je een goed beeld van je eigen niveau, mogelijke aandachtspunten in techniek, interactie en/of aspecten van het design-proces waar je je nog op kan verbeteren.
-
-### Een blije klant
-Voor de klant maak je een (werkend) prototype. Gericht op een bepaalde gebruikersgroep, geschikt voor verschillende apparaten, met echte data, én een goede UX.
-Jeweettoch.
-Een blije klant is een goede klant.
-Soms ontkom je er niet aan dat je een beetje eigenwijs moet doen.
-Dan doe je juist niet wat de klant wil en probeer je de opdrachtgever te overtuigen met een proof-of-concept.
-En soms kan het voorkomen dat het proces niet helemaal soepel loopt.
-Dat hoort erbij en daar leer je van.
-Aan het eind van het project vragen we de klant feedback op het geleverde werk...
-
-<!-- Add a link to your live demo in Github Pages 🌐-->
-
-<!-- ☝️ replace this description with a description of your own work -->
-
-<!-- replace the code in the /docs folder with your own, so you can showcase your work with GitHub Pages 🌍 -->
-
-<!-- Add a nice poster image here at the end of the week, showing off your shiny frontend 📸 -->
-
-<!-- Maybe a table of contents here? 📚 -->
-
-<!-- How about a section that describes how to install this project? 🤓 -->
-
-<!-- ...but how does one use this project? What are its features 🤔 -->
-
-<!-- Maybe a checklist of done stuff and stuff still on your wishlist? ✅ -->
-
-<!-- How about a license here? 📜 (or is it a licence?) 🤷 -->
+With the grasp of the assignment that I have at this point of the assignment, the milestones will probably look like this:
+1. Concept & prototype with small dataset | At first I will present a concept to wallscope and get feedback on the concept after which I will commence work on the first prototype to realize the concept with only the smallest dataset provided by wallscope
+1. Improvements and larger datasets | When feedback is received on the first prototype, I will implement it into the prototype and start testing with larger datasets
+1. Prototype with medium dataset and possibly a peek into a larger dataset | At this point I would want to be able to either show a concept that would scale with the dataset or ideally a prototype that demonstrates this
+1. Prototype with large dataset | This will be a continuation of the previous milestone and its feedback
+1. Prototype for all datasets | Ideally I will have a prototype or concept that demonstrates well on all types of sizes of datasets
