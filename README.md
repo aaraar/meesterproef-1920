@@ -8,11 +8,11 @@ navigate but keeping in mind that the main purpose of the tool is to create and 
 vocabulary, not just visualise.
 
 ## Debriefing
-Wallscope creates knowledge graphs from the unique data vocabulary of their clients.
-Strvct is a structured data application that helps their clients delivering the right vocabulary to the dataset and visualizing their linked
+Wallscope creates structured vocabulary from the unique data of their clients .
+Strvct is a structured data application that helps their clients delivering the right data to the structured vocabulary and visualizing their linked
 data. This way, their clients get a better sense of how their data gets structured and improves their understanding of the service and how they should use it.
 The way larger datasets get visualized is a tough and challenging concept that wallscope hasn't figured out yet,
-so to us the task to help them come up with and prototype ideas for the visualization of LinkedData.
+so to us the task to help them come up with and prototype ideas for the visualization of the structured vocabulary.
 
 ### What does it mean
 Starting with this project, I had very little knowledge of LinkedData, knowledge graphs or other of these graph data standards.
@@ -75,12 +75,12 @@ A perfect example by Antero Duarte of Wallscope in his [Medium article about lin
 > `dbo:Jackie dbo:hasSibling dbo:Annete`
 
 ### What does Strvct do in all of this
-Strvct is an application that uses RDF and OWL to represent the vocabulary of a client so they can add NLP features to their products such as semantic search functionality.
+Strvct is an application that uses RDF and OWL to represent the data of a client as structured vocabulary, so they can add NLP features to their products such as semantic search functionality.
 The application allows clients to fill in their own data and link their data in a clear and easy to understand visualization.
-However, at this point the largest part of Strvct consists of a backend in which wallscope creates the links themselves after a client has send their data in their own format.
+However, at this point the largest part of Strvct consists of a backend in which wallscope creates the links themselves after a client has sent their data in their own format.
 
 ### Our goal
-Our goal in this is to prototype or atleast conceptualize frontend visualizations for a client so that they can understand what relations exist between which datapoints.
+Our goal in this is to prototype or at least conceptualize frontend visualizations for a client so that they can understand what relations exist between which data points.
 If possible, the way clients enter their data into Strvct and link their data should be taken into account while creating these prototypes.
 
 ### Planning
