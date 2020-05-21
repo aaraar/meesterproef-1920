@@ -1,24 +1,24 @@
 # Strvct
 ### By Wallscope
 
+## Debriefing
+Wallscope creates structured vocabulary from the unique data of their clients.
+Strvct is a structured data application that helps their clients delivering the right data and connecting the dots to create a structured vocabulary and visualizing their linked.
+data. This way, their clients get a better sense of how their data gets structured and improves their understanding of the service and how they should use it.
+The way larger datasets get visualized is a tough and challenging concept that wallscope hasn't figured out yet,
+so to us the task to help them come up with and prototype ideas for the visualization of the structured vocabulary.
+
 ## Case in the words of Wallscope
 What we ask of you is that you take in this data, work with us to understand the use case
 and help us with ideas on how to visualise the vocabulary in a way that makes it easy to
 navigate but keeping in mind that the main purpose of the tool is to create and edit the
 vocabulary, not just visualise.
 
-## Debriefing
-Wallscope creates structured vocabulary from the unique data of their clients .
-Strvct is a structured data application that helps their clients delivering the right data to the structured vocabulary and visualizing their linked
-data. This way, their clients get a better sense of how their data gets structured and improves their understanding of the service and how they should use it.
-The way larger datasets get visualized is a tough and challenging concept that wallscope hasn't figured out yet,
-so to us the task to help them come up with and prototype ideas for the visualization of the structured vocabulary.
-
 ### What does it mean
-Starting with this project, I had very little knowledge of LinkedData, knowledge graphs or other of these graph data standards.
+Starting with this project, I had very little knowledge of LinkedData, knowledge graphs, RDF and other semantic data standards.
 To help me understand the assignment a little bit better, I have listed a few terms and standards below that I needed to wrap my head around
 first, before I really understood what was supposed to happen.
-Most of these terms are mentioned in Medium articles written by employees of Wallscope and are explained lot better and more comprehensive than I did, 
+Most of these terms are mentioned in Medium articles written by employees of Wallscope and are explained a lot better and more comprehensive than I did, 
 but beneath are my very brief explanations of how I have grasped them.
 
 ### LinkedData / knowledge graphs
@@ -39,13 +39,14 @@ LinkedData according to W3C:
 > ~ [W3C](https://www.w3.org/wiki/LinkedData)
 
 LinkedData is a term that has been around for quite some time, however these standards are not as widely adopted as Tim Bernsers-Lee had hoped.
-It is however becoming more and more popular to use similar standards such as RDF with datasets to work with data.
+It is however becoming more and more popular to use similar standards such as RDF with datasets to add semantics to data.
 
 ### RDF
-Resource Description Framework, is also a representing data, however it doesn't always requires data to be structured properly.
+Resource Description Framework, is also a representation of data, however it doesn't always requires data to be structured properly.
 In the RDF standard, data always consists of what is called a 'triple'.
-This means that two datapoints are connected by their relation to each other, so `monkey IS animal` but also `animal CONTAINS monkey`.
-The fact that these relations CAN go two ways or even have another relation the other way around is a critical part of why triples are so powerful to represent the data.
+This means that two datapoints are connected by their relation to each other, so `monkey IS animal` for example.
+The fact that these relations CAN go two ways or even have another relation the other way around is a critical part of why triples are so powerful to represent the data.    
+`John LIKES Jeff` but `Jeff HATES John` for example.
 
 RDF accordingf to W3C:
 > RDF is a standard model for data interchange on the Web. RDF has features that facilitate data merging even if the underlying schemas differ, and it specifically supports the evolution of schemas over time without requiring all the data consumers to be changed.    
@@ -66,16 +67,19 @@ The first hit was from winnie-the-pooh where an owl supposedly writes his name a
 > ~ [W3C](https://www.w3.org/2003/08/owlfaq) 
 
 So a standard for a language that describes ontology for which the name has been chosen on the basis of how much cooler it IS than the original acronym... yeah this is already getting meta.
-Actually, OWL is quite a simple concept.
+This confused me right out of the gate, however, OWL is actually quite a simple concept when you understand LinkedData and RDF.
 
-OWL is a way of describing the relations between data.
+OWL is a way of describing the relations between the data.
 A perfect example by Antero Duarte of Wallscope in his [Medium article about linkedData](https://medium.com/wallscope/linked-data-a-conceptual-exploration-9860a1f44d68):
-> OWL allows us to express that when two people share a parent, they are siblings. So even if our data doesn’t explicitly say that, inference lets us know that the following triples exist implicitly:
+> OWL allows us to express that when two people share a parent, they are siblings. 
+> `dbr:Alex dbo:hasChild dbo:Jackie`
+> `dbr:Alex dbo:hasChild dbo:Annete`
+> So even if our data doesn’t explicitly say that, inference lets us know that the following triples exist implicitly:
 > `dbo:Annete dbo:hasSibling dbo:Jackie`
 > `dbo:Jackie dbo:hasSibling dbo:Annete`
 
 ### What does Strvct do in all of this
-Strvct is an application that uses RDF and OWL to represent the data of a client as structured vocabulary, so they can add NLP features to their products such as semantic search functionality.
+Strvct is an application that uses structured data standards to represent the data of a client as structured vocabulary.
 The application allows clients to fill in their own data and link their data in a clear and easy to understand visualization.
 However, at this point the largest part of Strvct consists of a backend in which wallscope creates the links themselves after a client has sent their data in their own format.
 
