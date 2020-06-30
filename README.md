@@ -1,6 +1,6 @@
 # Strvct
 ### By Wallscope
-##[Read the wiki for my product biography](https://github.com/aaraar/meesterproef-1920/wiki)
+## [Read the wiki for my product biography](https://github.com/aaraar/meesterproef-1920/wiki)
 
 ## Debriefing
 Wallscope creates structured vocabulary from the unique data of their clients.
